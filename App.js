@@ -8,10 +8,10 @@ import ShoppingCart from './src/screens/ShoppingCart';
 export default function App() {
   return (
     <View className="flex-1 items-center justify-center bg-white">
-      {/* <Navigation /> */}
+      <Navigation />
       {/* <ProductPage/> */}
       {/* <ProductDetails/> */}
-      <ShoppingCart/>
+      {/* <ShoppingCart/> */}
       <StatusBar style="auto" />
     </View>
   );
