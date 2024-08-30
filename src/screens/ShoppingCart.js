@@ -1,12 +1,17 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { FlatList, View, Text, Pressable } from "react-native";
+import { useState,useEffect } from "react";
 
 const ShoppingCart = () => {
-  return (
-    <View>
-      <Text>ShoppingCart</Text>
-    </View>
-  )
-}
 
-export default ShoppingCart
+const ShoppingCartTotals = () => {
+    return (
+      <View>
+        <Text>
+            Cart
+        </Text>
+      </View>
+    );
+  }
+};
+
+export default ShoppingCart;
