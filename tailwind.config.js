@@ -6,6 +6,7 @@ module.exports = {
     "./src/screens/ProductDetails.js",
     "./src/screens/ShoppingCart.js",
     "./src/Navigation.js",
+    "./src/screens/LoadingPage.js",
   ],
   theme: {
     extend: {},

@@ -2,7 +2,7 @@ import { View, Text, FlatList, Image, Pressable } from "react-native";
 import { useEffect, useState } from "react";
 import "nativewind";
 
-const ProductPage = ({ navigation}) => {
+const ProductPage = ({navigation}) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -24,10 +24,9 @@ const ProductPage = ({ navigation}) => {
   const renderItem = ({ item }) => (
     <Pressable
       onPress={() => {
-        console.log("Navigating to ProductDetails");
-        navigation.navigate("ProductDetails");
+        navigation.navigate('ProductDetails')
       }}
-      className="w-1/2 p-1"
+      className="w-1/2 p-1 flex-1"
     >
       <Image
         className="w-full aspect-square"

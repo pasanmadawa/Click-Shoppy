@@ -5,10 +5,8 @@ const ShoppingCart = () => {
 
 const ShoppingCartTotals = () => {
     return (
-      <View>
-        <Text>
-            Cart
-        </Text>
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <Text classname="font-medium">Cart1</Text>
       </View>
     );
   }
