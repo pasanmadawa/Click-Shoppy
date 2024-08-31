@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import "nativewind";
 
 const ProductPage = ({navigation}) => {
+
+
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -24,7 +26,7 @@ const ProductPage = ({navigation}) => {
   const renderItem = ({ item }) => (
     <Pressable
       onPress={() => {
-        navigation.navigate('ProductDetails')
+        navigation.navigate('Product Details',{product: item.id})
       }}
       className="w-1/2 p-1 flex-1"
     >
@@ -37,15 +39,19 @@ const ProductPage = ({navigation}) => {
       <Text className="font-semibold pl-1">{item.name}</Text>
       <Text className="pl-1">{item.brandName}</Text>
       <Text className="pl-1">
-        {item.price.amount}
-        {item.price.currency}
+        {item.price.amount} {item.price.currency}
       </Text>
     </Pressable>
   );
 
   return (
     <View>
-      <FlatList data={products} renderItem={renderItem} numColumns={2} />
+      <FlatList
+        data={products}
+        renderItem={renderItem}
+        numColumns={2}
+        decelerationRate={0.5}
+      />
     </View>
   );
 };

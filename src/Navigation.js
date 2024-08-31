@@ -19,10 +19,12 @@ const Navigation = () => {
         <Stack.Screen
           name="Products"
           component={ProductPage}
-          options={({navigation}) =>({
+          options={({ navigation }) => ({
             headerRight: () => (
-              <Pressable onPress={() => navigation.navigate('Cart')} 
-                className="flex-row">
+              <Pressable
+                onPress={() => navigation.navigate("Cart")}
+                className="flex-row"
+              >
                 <FontAwesome5 name="shopping-cart" size={18} color="gray" />
                 <Text className="ml-2 font-medium">1</Text>
               </Pressable>
@@ -30,11 +32,21 @@ const Navigation = () => {
           })}
         />
         <Stack.Screen
-          name="ProductDetails"
+          name="Product Details"
           component={ProductDetails}
-          options={{ presentation: "modal" }}
+          options={({ navigation }) => ({
+            headerRight: () => (
+              <Pressable
+                onPress={() => navigation.navigate("Cart")}
+                className="flex-row"
+              >
+                <FontAwesome5 name="shopping-cart" size={18} color="gray" />
+                <Text className="ml-2 font-medium">1</Text>
+              </Pressable>
+            ),
+          })}
         />
-        <Stack.Screen name="Cart" component={ShoppingCart}/>
+        <Stack.Screen name="Cart" component={ShoppingCart} />
       </Stack.Navigator>
     </NavigationContainer>
   );
